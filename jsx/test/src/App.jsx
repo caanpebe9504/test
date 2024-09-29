@@ -5,14 +5,23 @@ import Title from "./components/title"
 
 
 function App() {
+  // Recuerda que este es solo un componente funcional, 
+  // tu debes incluir estilos para hacerlo más atractivo
   return (
     <div>
-      <h1>Artista/personaje Favorito</h1>
-      <img src="" alt="Foto personaje" />
-      <p>
-        Breve  descripción del personaje.
-        Puedes incluir detalles como su nombre, género, si está vivo o no, etc.
-      </p>
+      {/* Titulo de el artista/personaje */}
+      <Titulo
+        title={}
+      />
+      {/* Imagen de el artista/personaje */}
+      <Image
+        url={} 
+      />
+      {/* Detalles de el artista/personaje */}
+      <Details
+        genre={} 
+        status={} 
+      />
     </div>
   );
 }
