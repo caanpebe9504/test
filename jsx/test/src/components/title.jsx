@@ -1,8 +1,9 @@
 import React from "react"
 
-// const url = "https://randomuser.me/api/"
 
 function Title(props){
+
+    console.log(props)
 
     return (
         <div>
@@ -10,7 +11,6 @@ function Title(props){
         </div>
     )
     
-
 }
 
 export default Title;

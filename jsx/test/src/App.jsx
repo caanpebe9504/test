@@ -4,22 +4,17 @@ import React from 'react'
 import Title from "./components/title"
 
 
-async function App() {
-
-  const url = "https://randomuser.me/api/"
-
-  const fetchResult = await fetch(url)
-  const dataFetched = await fetchResult.json()
-
+function App() {
   return (
-    
     <div>
-      {/* Titulo de el artista/personaje */}
-      <Titulo
-        title={dataFetched.results[0].name.title}
-      />
+      <h1>Artista/personaje Favorito</h1>
+      <img src="" alt="Foto personaje" />
+      <p>
+        Breve  descripción del personaje.
+        Puedes incluir detalles como su nombre, género, si está vivo o no, etc.
+      </p>
     </div>
-  )
+  );
 }
 
 export default App;
