@@ -1,29 +1,33 @@
-
 import './App.css'
-import React from 'react'
-import Title from "./components/title"
+import React, { useState, useEffect } from "react"
 
+import Hijo from "./components/hijo/hijo"
+ 
+function App(){
 
-function App() {
-  // Recuerda que este es solo un componente funcional, 
-  // tu debes incluir estilos para hacerlo más atractivo
+  const [nombre, setNombre] = useState("")
+  const [imagen, setImagen] = useState("")
+
+  useEffect(() => {
+    const url = "https://rickandmortyapi.com/api/character/10"
+
+    fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+      setNombre(data.name)
+      setImagen(data.image)
+    })
+
+  }, [])
+  
   return (
     <div>
-      {/* Titulo de el artista/personaje */}
-      <Titulo
-        title={}
-      />
-      {/* Imagen de el artista/personaje */}
-      <Image
-        url={} 
-      />
-      {/* Detalles de el artista/personaje */}
-      <Details
-        genre={} 
-        status={} 
-      />
+      <h1>Hola mundo</h1>
+      < Hijo nombre = {nombre} imagen = {imagen} />
     </div>
-  );
+    
+  )
+  
 }
 
-export default App;
+export default App
