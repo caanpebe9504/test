@@ -1,12 +1,17 @@
 import React from "react"
 
-const Details = ({gender, status}) =>{
-    return(
-        <div>
-            <p>{gender}</p>
-            <p>{status}</p>
-        </div>
-    )
-}
+const Details = ({status, gender}) => (
+    
+    <>
+        <p>
+           Estado: {status}
+        </p>
+
+        <p>
+           Género: {gender}
+        </p>
+    </>
+
+)
 
 export default Details

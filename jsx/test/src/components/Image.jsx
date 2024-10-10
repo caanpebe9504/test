@@ -1,11 +1,9 @@
 import React from "react"
 
-const Image = ({imageUrl}) => {
-    return(
-        <div>
-            <img src={imageUrl} alt="" />
-        </div>
-    )
-}
+const Image = ({url}) => ( 
+    <>
+        <img src={url} alt="" />
+    </>
+)
 
 export default Image
